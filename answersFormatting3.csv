@@ -50,9 +50,9 @@ A,"<h1>Household Routines:</h1>
 </ul>
 </li>
  </li></ul>",B,"<h1>Clothes Washing:</h1>
-<ul class="inline-bullets">
+<ul class=\"inline-bullets\">
     <li>Wash clothes in cold water.
-        <ul class="inline-bullets">
+        <ul class=\"inline-bullets\">
             <li><strong>Expected cost savings: ~ $1 per wash cycle</strong></li>
             <li><strong>Reduction in emissions: > 0.1 tonnes of CO<sub>2</sub> compared to washing clothes in hot water</strong></li>
         </ul>
