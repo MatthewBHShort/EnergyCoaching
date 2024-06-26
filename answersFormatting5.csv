@@ -155,45 +155,104 @@ H,"<h1>Heating and Cooling Maintenance Routines:</h1>
     <li><a href=\""https://www.skilledtradesontario.ca/about-us/\"">Skilled Trades Ontario</a></li>
 </ul>
 ",
-I,"Heating and Cooling Maintenance Routines:
-Electric Baseboard Heating:
--to ensure that the baseboards deliver heat efficiently and safely, regularly (i.e. once per year) clean the units of dust (e.g. vacuum cleaner after the heater is switched off). Remember to keep furniture, curtains and other objects away from the heaters to ensure safe and reliable operation. Apart from being able to deliver heat more evenly, regular cleaning of the electric baseboards will extend their lives and reduce the risk of fire.
--there are many helpful DIY videos on YouTub such as: https://www.youtube.com/watch?v=h1i3ysAo5ZY",
+I,"<h1>Heating and Cooling Maintenance Routines:</h1>
+<h2>Electric Baseboard Heating:</h2>
+<ul class=\""inline-bullets\"">
+    <li>To ensure that the baseboards deliver heat efficiently and safely, regularly (i.e. once per year) clean the units of dust (e.g. vacuum cleaner after the heater is switched off). Remember to keep furniture, curtains and other objects away from the heaters to ensure safe and reliable operation.
+        <ul class=\""inline-bullets\"">
+            <li>Apart from being able to deliver heat more evenly, regular cleaning of the electric baseboards will extend their lives and reduce the risk of fire.</li>
+        </ul>
+    </li>
+    <li>There are many helpful DIY videos on YouTube such as: <a href=\""https://www.youtube.com/watch?v=h1i3ysAo5ZY\"">https://www.youtube.com/watch?v=h1i3ysAo5ZY</a></li>
+</ul>
+",
 J,"Water Heater Maintenance Routines:
 Tank-based Heater (gas and electric):
 -turn down the temperature setting to >49C (>120F) to save energy, extend the life of the heater and prevent scalding. Expected water heating energy savings: <10%/yr; Expected emissions reductions: <10%/yr
 -follow manufacturer's recommended maintenance schedule (e.g. flushing the tank once per year) to ensure proper operation of the appliance and extended life. Consider combining the heater's maintenance with the home's heating annual service call to lower costs
 -Natural Resources Canada released a helpful guide for homeowners on all aspects of hot water heaters including comparison of different technologies and energy saving tips: https://natural-resources.canada.ca/sites/nrcan/files/oee/files/pdf/equipment/WaterHeaterGuide_e.pdf",
-K,"Water Heater Maintenance Routines:
-Tankless Water Heater (a.k.a. On-Demand Water Heater):
--turn down the temperature setting to >49C (>120F) to save energy, extend the life of the heater and prevent scalding. Expected water heating energy savings: <10%/yr; Expected emissions reductions: <10%/yr
--schedule a technician to service the heating system as per the manufacturer's recommended schedule. Annual costs ~$300. Expected water heating energy savings: <10%/yr; Expected emissions reductions: <10%/yr
--consider combining the water heater's service call with that of your home's other heating and cooling equipment regular maintenance schedule to lower costs
--Natural Resources Canada released a helpful guide for homeowners on all aspects of hot water heaters including comparison of different technologies and energy saving tips: https://natural-resources.canada.ca/sites/nrcan/files/oee/files/pdf/equipment/WaterHeaterGuide_e.pdf",
-L,"Thermostat Upgrading:
--if your home's thermostat cannot be programmed to run your heating and cooling on specified schedules, consider replacing it with a smart thermostat. The scheduling feature can enhance the level of comfort in the home whilst saving energy. Typical cost range of a smart thermostat is $150 - $300. Expected energy savings: >10%/yr; Expected emissions reductions: >10%
--most installations can be done by homeowners themselves whilst following the manufacturer's instructions.",
-M,"Space-Heating Equipment Upgrading:
-Ductwork-based System:
+K,"<h1>Water Heater Maintenance Routines:</h1>
+<h2>Tankless Water Heater (a.k.a. On-Demand Water Heater):</h2>
+<ul class=\""inline-bullets\"">
+    <li>Turn down the temperature setting to &gt;49C (&gt;120F) to save energy, extend the life of the heater and prevent scalding.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected water heating energy savings: &lt;10% per year</strong></li>
+            <li><strong>Expected emissions reductions: &lt;10% per year</strong></li>
+        </ul>
+    </li>
+    <li>Schedule a technician to service the heating system as per the manufacturer's recommended schedule.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Annual costs: ~$300</strong></li>
+            <li><strong>Expected water heating energy savings: &lt;10% per year</strong></li>
+            <li><strong>Expected emissions reductions: &lt;10% per year</strong></li>
+        </ul>
+    </li>
+    <li>Consider combining the water heater's service call with that of your home's other heating and cooling equipment regular maintenance schedule to lower costs.</li>
+    <li>Natural Resources Canada released a helpful guide for homeowners on all aspects of hot water heaters including comparison of different technologies and energy saving tips: <a href=\""https://natural-resources.canada.ca/sites/nrcan/files/oee/files/pdf/equipment/WaterHeaterGuide_e.pdf\"">https://natural-resources.canada.ca/sites/nrcan/files/oee/files/pdf/equipment/WaterHeaterGuide_e.pdf</a></li>
+</ul>
+",
+L,"<h1>Thermostat Upgrading:</h1>
+<ul class=\""inline-bullets\"">
+    <li>If your home's thermostat cannot be programmed to run your heating and cooling on specified schedules, consider replacing it with a smart thermostat. The scheduling feature can enhance the level of comfort in the home whilst saving energy.
+        <ul class=\""inline-bullets\"">
+            <li>Typical cost range of a smart thermostat is $150 - $300</li>
+            <li><strong>Expected energy savings: &gt;10% per year</strong></li>
+            <li><strong>Expected emissions reductions: &gt;10%</strong></li>
+        </ul>
+    </li>
+    <li>Most installations can be done by homeowners themselves whilst following the manufacturer's instructions.</li>
+</ul>
+",
+M,"<h1>Space-Heating Equipment Upgrading:</h1>
+<h2>Ductwork-based System:</h2>
+<p>Aging gas furnace replacement with these various options:</p>
+<h3>1) High energy efficiency gas furnace:</h3>
+<ul class=\""inline-bullets\"">
+    <li>High energy efficiency gas furnace with an AFUE rating (Annual Fuel Utilization Efficiency) &gt;90% to replace an older, less efficient (i.e. low and mid efficiency) gas furnace.
+        <ul class=\""inline-bullets\"">
+            <li>Cost can range from $3,000 - $6,000 depending on home</li>
+            <li><strong>Expected energy savings: &lt;20%</strong></li>
+            <li><strong>Expected emissions reductions: &lt;20%</strong></li>
+        </ul>
+    </li>
+</ul>
+<p>Seek reputable contractors by speaking to others for reference and referrals, client reviews verifying their technical credentials such as being licensed gas fitters. Most reputable furnace manufacturers offer a 10-year warranty on key parts and 20 years on the heat exchanger. Installers should offer at least a 1-year warranty on labor to install the equipment. Most furnace replacements can be done in a day.</p>
 
-Aging gas furnace replacement with these various options:
-1) High energy efficiency gas furnace with and an AFUE rating (Annual Fuel Utilization Efficiency) >90% to replace an older, less efficient (i.e. low and mid efficiency) gas furnace. Cost can range from $3,000 - $6,000 depending on home. Expected energy savings: <20%; Expected emissions reductions: <20%
-Seek reputable contractors by speaking to others for reference and referrals, client reviews verifying their technical credentials such as being licensed gas fitters. Most reputable furnace manufacturers offer a 10yr warranty on key parts and 20yrs on the heat exchanger. Installers should offer at least a 1yr warranty on labour to install the equipment. Most furnace replacements can be done in a day.
+<h3>2) Fully electric furnace heating system:</h3>
+<ul class=\""inline-bullets\"">
+    <li>Fully electric furnace heating system that involves replacing the home's existing gas furnace and AC with a new electric furnace (comprises new air handler with electric strip-heaters) and cold climate heat pump which must have a COP rating (Coefficient of Performance) of &gt;1.8 with an outside temperature of -15C as per NRCan's guidelines.
+        <ul class=\""inline-bullets\"">
+            <li>The typical combined installed cost can range from $15,000 - $25,000 depending on the home and equipment</li>
+            <li><strong>Expected energy savings: &gt;50% per year</strong></li>
+            <li><strong>Expected emissions reductions: &gt;50% per year</strong></li>
+        </ul>
+    </li>
+</ul>
+<p>Natural Resources Canada has a helpful resource guide on the fundamentals of heat pumps: <a href=\""https://natural-resources.canada.ca/energy-efficiency/heat-pumps/heat-pump-basics/25589\"">https://natural-resources.canada.ca/energy-efficiency/heat-pumps/heat-pump-basics/25589</a></p>
 
-2) Fully electric furnace heating system that involves replacing the home's existing gas furnace and AC with a new electric furnace (comprises new air handler with electric strip-heaters) and cold climate heat pump which must have a COP rating (Coefficient of Performance) of >1.8 with an outside temperature of -15C as per NRCan's guidelines. The typical combined installed cost can range from $15,000 - $25,000 depending on the home and equipment. The typical installation can take one or two days to complete. Expected energy savings: >50%/yr; Expected emissions reductions: >50%/yr. The typical components of warranties for the type of system include: parts (e.g. blower, heating element, compressor for the heat pump that can range from several years to a lifetime), labour for install replacement parts that are still under warranty and well as the original installation's labour
+<h3>Notes:</h3>
+<ul class=\""inline-bullets\"">
+    <li>a) A home's annual utility bills may be actually greater by &gt;$300 than they were before the replacement. The extra cost will depend on the home's ductwork system (i.e. capacity of cold climate heat pump that can be accommodated where a larger rating is preferred), the efficiency of the new heating system, the severity of winter temperatures and finally the homeowner's habits (e.g. temperature setbacks overnight vs. leaving the thermostat set at a constant temperature-setting, etc.).</li>
+    <li>b) This type of system will almost certainly require that the home has a 200A electrical service with sufficient available capacity to connect the new electric furnace heating system in conjunction with the home's existing and future expected (e.g. EV charger) electrical appliances. The cost of an electrical panel upgrade, if required, will range from $2,000 - $4,000 in most cases. Always consult a licensed electrician.</li>
+    <li>c) The location of the cold climate heat pump must take into account that (i) it will remain clear of snow in the winter (e.g. snow banks, roof snow-shedding), and (ii) the condensate generated by the unit will not cause issues such as ice buildup on pathways and potential water leakage into the home's foundation.</li>
+    <li>d) Since an electric furnace heating system would eliminate the household's largest use of gas (i.e. gas furnace), homeowners may wish to consider whether this is the time they should electrify their other gas appliances as well (e.g. hot water heating). Doing so would eliminate the need for gas service to the home altogether. This would save the homeowner a whole set of fixed monthly charges from the gas utility (~ $300 per year).</li>
+</ul>
 
-Natural Resources Canada has a helpful resource guide on the fundamentals of heat pumps: https://natural-resources.canada.ca/energy-efficiency/heat-pumps/heat-pump-basics/25589 
-
-Notes:
-a) a home's annual utility bills may be actually greater by >$300 than they were before the replacement. The extra cost will depend on the home's ductwork system (i.e. capacity of cold climate heat pump that can be accommodated where a larger rating is preferred), the efficiency of the new heating system, the severity of winter temperatures and finally the homeowner's habits (e.g. temperature setbacks overnight vs. leaving the thermostat set at a constant temperature-setting, etc.).
-b) this type of system will almost certainly require that the home has a 200A electrical service with sufficient available capacity to connect the new electric furnace heating system in conjunction with the home's existing and future expected (e.g. EV charger) electrical appliances. The cost of an electrical panel upgrade, if required, will range from $2,000 - $4,000 in most cases. Always consult a licensed electrician.
-c) The location of the cold climate heat pump must take into account that (i) it will remain clear of snow in the winter (e.g. snow banks, roof snow-shedding), and (ii) the condensate generated by the unit will not cause issues such as ice buildup on pathways and potential water leakage into the home's foundation.
-d) Since an electric furnace heating system would eliminate the household's largest use of gas (i.e. gas furnace), homeowners may wish to consider whether this is the time they should electrify their other gas appliances as well (e.g. hot water heating). Doing so would eliminate the need for gas service to the home altogether. This would save the homeowner a whole set of fixed monthly charges from the gas utility (~ $300/yr).
-
-How to find a reputable contractor should consider the following aspects: 1) on-line research and personal recommendations, 2) verify contractor is licensed, bonded and insured, 3) contractor has professional affilations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI), 4) contractor has a solid track record with appropriate skills, 5) can provide a written contract, and 6) contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of a gas furnace replacement, the contractor must hold a gas fitter license. In the case of the electric furnace heating system, the contractor must be licensed to work with refrigerants and should have a long solid track record working with heat pump-based equipment.
-Two sites for homeowners to visit to help in finding and selecting reputable contractors:
-The Heating, Refrigeration and Air Conditioning Institute of Canada: https://www.hrai.ca/consumer-tips 
-Skilled Trades Ontario: https://www.skilledtradesontario.ca/about-us/",
+<h3>How to find a reputable contractor should consider the following aspects:</h3>
+<ul class=\""inline-bullets\"">
+    <li>On-line research and personal recommendations</li>
+    <li>Verify contractor is licensed, bonded and insured</li>
+    <li>Contractor has professional affiliations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI))</li>
+    <li>Contractor has a solid track record with appropriate skills</li>
+    <li>Can provide a written contract</li>
+    <li>Contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of a gas furnace replacement, the contractor must hold a gas fitter license. In the case of the electric furnace heating system, the contractor must be licensed to work with refrigerants and should have a long solid track record working with heat pump-based equipment.</li>
+</ul>
+<p>Two sites for homeowners to visit to help in finding and selecting reputable contractors:</p>
+<ul class=\""inline-bullets\"">
+    <li><a href=\""https://www.hrai.ca/consumer-tips\"">The Heating, Refrigeration and Air Conditioning Institute of Canada</a></li>
+    <li><a href=\""https://www.skilledtradesontario.ca/about-us/\"">Skilled Trades Ontario</a></li>
+</ul>
+",
 N,"Space-Heating Equipment Upgrading:
 Boiler-Hydronic (Radiator/In-Floor) Heating System:
 -Consider replacing the gas-fired boiler with a cold climate heat pump connected to a hydronic air-handler (a.k.a. heat exchanger) that would transfer the pump's thermal energy to the home's radiator or in-floor heating network. It may also be possible to use the same system to provide domestic hot water heating as well thereby negating the need for a separate water heater. Depending on the home and location, the annual energy costs may exceed the heating costs from a gas furnace, however. The delivered benefits, though, include vastly expected reduced emissions of >50%/yr, the continued stable heating sink provided from the home's radiators and in-floor heating network, and possibly the elimination of a separate water heater. For very cold weather, an electric backup system built into an accompanying buffer tank will be included in the system's specifications. Typical components of a warranty include: parts (e.g. key components such as heat exchanger, circulation pump, controls, etc. that can range from several years to a lifetime depending on the quality of the make and model), labour for install replacement parts that are still under warranty and well as the original installation's labour)
