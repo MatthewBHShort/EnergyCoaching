@@ -30,41 +30,131 @@ C,"<h1>Clothes Drying:</h1>
     </li>
 </ul>
 ",
-D,"Dish Washing:
--use dishwasher during times of OFF-PEAK electricity rates. The cost estimate could be ~ $0.25/cycle so running the machine during OFF-PEAK could save >50%
--scrape plates of food scraps before loading into dishwasher
--run dishwasher only when it's full
--consider setting machine to air dry rather than heat dry",
-E,"Thermostat Operation:
--turn down temperature-setting a degree or two in the winter to lower heating costs. Expected heating energy savings: >1%/degree of total heating costs; Expected emissions reductions: >0.05 tonnes CO2/degree
--turn up temperature-setting a degree or two in the summer to lower cooling costs. Expected cooling energy savings: >1%/degree of total cooling costs",
-F,"Heating and Cooling Maintenance Routines:
-Ductwork-based System:
--clean and replace air filters at least twice per year. Expeceted cost of filter replacements: ~ $50/filter; Expected energy savings: >$10/month
--have heating and cooling equipment inspected and maintained once per year to ensure the equipment operate well and are less likely to break down unexpectedly, and extend the life of the equipment. Expected maintenance cost: ~ $300/call excluding parts; Expected energy savings: <25%/yr of total heating and cooling cost; Expected emissions reductions: <25%/yr
--have ductwork cleaned every three to five years to maintain unhindered air flow to prevent stress on the home's heating and cooling equipment. Cleaner ductwork will also help improve the air quality in the home as well. Expected cost: ~ $300/call
+D,"<h1>Dish Washing:</h1>
+<ul class=\""inline-bullets\"">
+    <li>Use dishwasher during times of OFF-PEAK electricity rates.
+        <ul class=\""inline-bullets\"">
+            <li><strong>The cost estimate could be ~ $0.25 per cycle so running the machine during OFF-PEAK could save &gt;50%</strong></li>
+        </ul>
+    </li>
+    <li>Scrape plates of food scraps before loading into dishwasher.</li>
+    <li>Run dishwasher only when it's full.</li>
+    <li>Consider setting machine to air dry rather than heat dry.</li>
+</ul>
+",
+E,"<h1>Thermostat Operation:</h1>
+<ul class=\""inline-bullets\"">
+    <li>Turn down temperature-setting a degree or two in the winter to lower heating costs.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected heating energy savings: &gt;1% per degree of total heating costs</strong></li>
+            <li><strong>Expected emissions reductions: &gt;0.05 tonnes CO<sub>2</sub> per degree</strong></li>
+        </ul>
+    </li>
+    <li>Turn up temperature-setting a degree or two in the summer to lower cooling costs.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected cooling energy savings: &gt;1% per degree of total cooling costs</strong></li>
+        </ul>
+    </li>
+</ul>
+",
+F,"<h1>Heating and Cooling Maintenance Routines:</h1>
+<h2>Ductwork-based System:</h2>
+<ul class=\""inline-bullets\"">
+    <li>Clean and replace air filters at least twice per year.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected cost of filter replacements: ~ $50 per filter</strong></li>
+            <li>Expected energy savings: &gt;$10 per month</li>
+        </ul>
+    </li>
+    <li>Have heating and cooling equipment inspected and maintained once per year to ensure the equipment operate well and are less likely to break down unexpectedly, and extend the life of the equipment.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected maintenance cost: ~ $300 per call excluding parts</strong></li>
+            <li><strong>Expected energy savings: &lt;25% per year of total heating and cooling cost</strong></li>
+            <li><strong>Expected emissions reductions: &lt;25% per year</strong></li>
+        </ul>
+    </li>
+    <li>Have ductwork cleaned every three to five years to maintain unhindered air flow to prevent stress on the home's heating and cooling equipment. Cleaner ductwork will also help improve the air quality in the home as well.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected cost: ~ $300 per call</strong></li>
+        </ul>
+    </li>
+</ul>
 
-How to find a reputable service technician should consider the following aspects: 1) on-line research and personal recommendations, 2) verify contractor is licensed, bonded and insured, 3) contractor has professional affilations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI), 4) contractor has a solid track record with appropriate skills, 5) can provide a written contract, and 6) contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with gas (i.e. furnace) and refrigerant (i.e. air conditioner) systems.
-Two sites for homeowners to visit to help in the finding and selecting reputable contractors:
-The Heating, Refrigeration and Air Conditioning Institute of Canada: https://www.hrai.ca/consumer-tips 
-Skilled Trades Ontario: https://www.skilledtradesontario.ca/about-us/",
-G,"Heating and Cooling Maintenance Routines:
-Boiler-Hydronic (Radiator/In-Floor) Heating System:
--schedule a technician to inspect and maintain the system as per the manufacturer's recommended schedule, or if unknown, once per year. Expected maintenance cost: ~$300/call excluding parts; Expected heating energy savings: <10%/yr; Expected emissions reductions: <10%/yr
+<h2>How to find a reputable service technician should consider the following aspects:</h2>
+<ul class=\""inline-bullets\"">
+    <li>On-line research and personal recommendations</li>
+    <li>Verify contractor is licensed, bonded and insured</li>
+    <li>Contractor has professional affiliations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI))</li>
+    <li>Contractor has a solid track record with appropriate skills</li>
+    <li>Can provide a written contract</li>
+    <li>Contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with gas (i.e. furnace) and refrigerant (i.e. air conditioner) systems.</li>
+</ul>
+<p>Two sites for homeowners to visit to help in the finding and selecting reputable contractors:</p>
+<ul class=\""inline-bullets\"">
+    <li><a href=\""https://www.hrai.ca/consumer-tips\"">The Heating, Refrigeration and Air Conditioning Institute of Canada</a></li>
+    <li><a href=\""https://www.skilledtradesontario.ca/about-us/\"">Skilled Trades Ontario</a></li>
+</ul>
+",
+G,"<h1>Heating and Cooling Maintenance Routines:</h1>
+<h2>Boiler-Hydronic (Radiator/In-Floor) Heating System:</h2>
+<ul class=\""inline-bullets\"">
+    <li>Schedule a technician to inspect and maintain the system as per the manufacturer's recommended schedule, or if unknown, once per year.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected maintenance cost: ~$300 per call excluding parts</strong></li>
+            <li><strong>Expected heating energy savings: &lt;10% per year</strong></li>
+            <li><strong>Expected emissions reductions: &lt;10% per year</strong></li>
+        </ul>
+    </li>
+</ul>
 
-How to find a reputable service technician should consider the following aspects: 1) on-line research and personal recommendations, 2) verify contractor is licensed, bonded and insured, 3) contractor has professional affilations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI), 4) contractor has a solid track record with appropriate skills, 5) can provide a written contract, and 6) contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with gas-fired boiler and radiator and in-floor heating systems.
-Two sites for homeowners to visit to help in the finding and selecting reputable contractors:
-The Heating, Refrigeration and Air Conditioning Institute of Canada: https://www.hrai.ca/consumer-tips 
-Skilled Trades Ontario: https://www.skilledtradesontario.ca/about-us/",
-H,"Heating and Cooling Maintenance Routines:
-Ductless Heat Pumps (a.k.a. Mini-Splits):
--clean air filters at least twice per year. Expected heating and cooling energy savings: <15%/yr; Expected emissions reductions: <15%/yr
--schedule a technician to inspect and maintain the system as per the manufacturer's recommended schedule, or if unknown, once per year. Expected maintenance cost: ~$300/call excluding parts; Expected heatings and cooling energy savings: <25%/yr; Expected emissions reductions: <25%/yr
+<h2>How to find a reputable service technician should consider the following aspects:</h2>
+<ul class=\""inline-bullets\"">
+    <li>On-line research and personal recommendations</li>
+    <li>Verify contractor is licensed, bonded and insured</li>
+    <li>Contractor has professional affiliations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI))</li>
+    <li>Contractor has a solid track record with appropriate skills</li>
+    <li>Can provide a written contract</li>
+    <li>Contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with gas-fired boiler and radiator and in-floor heating systems.</li>
+</ul>
+<p>Two sites for homeowners to visit to help in the finding and selecting reputable contractors:</p>
+<ul class=\""inline-bullets\"">
+    <li><a href=\""https://www.hrai.ca/consumer-tips\"">The Heating, Refrigeration and Air Conditioning Institute of Canada</a></li>
+    <li><a href=\""https://www.skilledtradesontario.ca/about-us/\"">Skilled Trades Ontario</a></li>
+</ul>
+",
+H,"<h1>Heating and Cooling Maintenance Routines:</h1>
+<h2>Ductless Heat Pumps (a.k.a. Mini-Splits):</h2>
+<ul class=\""inline-bullets\"">
+    <li>Clean air filters at least twice per year.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected heating and cooling energy savings: &lt;15% per year</strong></li>
+            <li><strong>Expected emissions reductions: &lt;15% per year</strong></li>
+        </ul>
+    </li>
+    <li>Schedule a technician to inspect and maintain the system as per the manufacturer's recommended schedule, or if unknown, once per year.
+        <ul class=\""inline-bullets\"">
+            <li><strong>Expected maintenance cost: ~$300 per call excluding parts</strong></li>
+            <li><strong>Expected heating and cooling energy savings: &lt;25% per year</strong></li>
+            <li><strong>Expected emissions reductions: &lt;25% per year</strong></li>
+        </ul>
+    </li>
+</ul>
 
-How to find a reputable service technician should consider the following aspects: 1) on-line research and personal recommendations, 2) verify contractor is licensed, bonded and insured, 3) contractor has professional affilations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI), 4) contractor has a solid track record with appropriate skills, 5) can provide a written contract, and 6) contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with heat pump-based equipment and specifically refrigerant systems.
-Two sites for homeowners to visit to help in the finding and selecting reputable contractors:
-The Heating, Refrigeration and Air Conditioning Institute of Canada: https://www.hrai.ca/consumer-tips
-Skilled Trades Ontario: https://www.skilledtradesontario.ca/about-us/",
+<h2>How to find a reputable service technician should consider the following aspects:</h2>
+<ul class=\""inline-bullets\"">
+    <li>On-line research and personal recommendations</li>
+    <li>Verify contractor is licensed, bonded and insured</li>
+    <li>Contractor has professional affiliations (e.g. member of the 'Heating, Refrigeration, and Air Conditioning Institute of Canada' (HRAI))</li>
+    <li>Contractor has a solid track record with appropriate skills</li>
+    <li>Can provide a written contract</li>
+    <li>Contractor communicates (both verbally and in writing) on a timely basis and properly. In the case of this technology, the contractor must have a long solid track record working with heat pump-based equipment and specifically refrigerant systems.</li>
+</ul>
+<p>Two sites for homeowners to visit to help in the finding and selecting reputable contractors:</p>
+<ul class=\""inline-bullets\"">
+    <li><a href=\""https://www.hrai.ca/consumer-tips\"">The Heating, Refrigeration and Air Conditioning Institute of Canada</a></li>
+    <li><a href=\""https://www.skilledtradesontario.ca/about-us/\"">Skilled Trades Ontario</a></li>
+</ul>
+",
 I,"Heating and Cooling Maintenance Routines:
 Electric Baseboard Heating:
 -to ensure that the baseboards deliver heat efficiently and safely, regularly (i.e. once per year) clean the units of dust (e.g. vacuum cleaner after the heater is switched off). Remember to keep furniture, curtains and other objects away from the heaters to ensure safe and reliable operation. Apart from being able to deliver heat more evenly, regular cleaning of the electric baseboards will extend their lives and reduce the risk of fire.
