@@ -1,4 +1,4 @@
-const questions = {
+const questions1 = {
     start: {
         question: "What is your driver? \n Please choose all that apply then click Next.",
         answers: {
