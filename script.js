@@ -1,7 +1,83 @@
-// URL to your hosted CSV file on GitHub
-const csvUrl = 'https://raw.githubusercontent.com/MatthewBHShort/EnergyCoaching/main/answers.csv';
+const csvUrl = 'https://raw.githubusercontent.com/MatthewBHShort/EnergyCoaching/main/answersFormatting5.csv';
+const txtUrl = 'https://raw.githubusercontent.com/MatthewBHShort/EnergyCoaching/main/questions3.txt';
 
-// Function to fetch and parse the CSV file
+
+const token = "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";
+
+
+
+lastQuestionStrAdded = "";
+lastQuestion = "start";
+
+
+
+
+
+    fetch(txtUrl)
+      .then(response => response.text())
+      .then(data => {
+        eval(data);
+        console.log('Object fetched and assigned:', questions);
+
+      })
+      .catch(error => console.error('Error fetching the file:', error));
+
+ 
+
+
+
+
+
+function saveString(passedThroughString) {
+    // const inputString = document.getElementById('inputString').value;
+    console.log(passedThroughString);
+    const inputString = passedThroughString;
+    localStorage.setItem('sharedString', inputString);
+    window.location.href = 'http://localhost:8000/results.html';
+    
+
+}
+
+function backButtonRemoveString(str){
+    console.log(result.answerString);
+    result.answerString = result.answerString.slice(0,-str.length);
+    console.log(result.answerString);
+}
+
+
+async function saveLast (nextQuestion,currentQuestion, str){
+    lastQuestionStrAdded = str;
+    if(questions[nextQuestion].answers["Back"]){
+        questions[nextQuestion].answers["Back"].next = currentQuestion;
+    }else{
+        questions[nextQuestion].answers["Back"] = { next: currentQuestion, action: () => {
+            console.log("Created back button works!!");
+            backButtonRemoveString(lastQuestionStrAdded);
+        }};
+    }
+}
+
+
+
+async function stringFunction(nextQuestion,currentQuestion, str){
+    saveLast(nextQuestion, currentQuestion, str);
+    result.answerString += str;
+    // console.log("STRING: " + result.answserString);
+}
+
+async function addRemoveDriver (s){
+    const driverString = s;
+    if(result.driver.includes(driverString)){
+        result.driver = result.driver.replace(driverString,'');
+        console.log(driverString + " removed");
+    }else{
+        result.driver += driverString;
+        console.log(s + " added");
+    }
+    console.log("result.driver: " + result.driver);   
+}
+
+
 async function fetchAndParseCSV(url) {
   const response = await fetch(url);
   const csvText = await response.text();
@@ -21,46 +97,29 @@ async function fetchAndParseCSV(url) {
 
 const driver = "";
 
-// Function to prompt for a letter and get the corresponding CSV data
 async function askForLetter(stringAnswer) {
   try {
     const csvData = await fetchAndParseCSV(csvUrl);
-
-   
-    // console.log('CSV Data:', csvData);
-
-    
     const letter = removeRepeatingCharacters(stringAnswer);
-    // const letter = "AB";
+    // const letter = "Z345";
+   
     console.log(stringAnswer + "    ->    " + letter)
 
-
     function removeRepeatingCharacters(str) {
-        return Array.from(new Set(str)).join('');
+        return Array.from(new Set(str)).join("");
       }    
 
     fullResult = "";
     for(let i = 0; i < letter.length; i++){
-        // console.log("Iteration: " + i);
         result = csvData.find(row => row.identifier && row.identifier.toLowerCase() === letter[i].toLowerCase());
-        // console.log(result);
         fullResult += result.paragraph;
         fullResult += "\n\n\n\n\n\n";
     }
-    // console.log("Full Result: " + fullResult)
+
+    
     if (result) {
-       document.getElementById('result').innerText = `Based on your specifications, we recommend the following: \n\n` + fullResult;
-
-
-        // console.log("full restuls \n" + fullResult);
-        // const container = document.getElementById('content');
-        // // document.getElementById('content').innerHTML = container;
-        // const formattedText = formatText(fullResult);
-        // container.appendChild(formattedText);
-
-        // // document.getElementById("myDiv").innerHTML = myString;
-
-
+        console.log("FULLRESULTS: " + fullResult);
+        saveString(fullResult);
 
     } else {
       document.getElementById('result').innerText = `No paragraph found for ${letter}`;
@@ -72,502 +131,14 @@ async function askForLetter(stringAnswer) {
 }
 
 
-const questions = {
-    start: {
-        question: "What is your driver?",
-        answers: {
-            "Reducing Costs": { next: "ductWork", action: () => result.driver += "costs"},
-            "Reducing GHGs": { next: "ductWork", action: () => result.driver += "ghgs"},
-            "Thermal Comfort": { next: "ductWork", action: () => result.driver += "comfort"},
-            "Equipment at End of Life": { next: "ductWork", action: () => result.driver += "equipment"},
-        }
-    },
-    ductWork: {
-        question: "Does your home have duct work?",
-        answers: {
-            "Yes": { next: "furnaceType" },
-            "No": { next: "hydronicHeating" },
-            "I don't know": { next: "virtualConsultation"},
-        }
-    },
-    furnaceType: {
-        question: "Do you have a gas/propane/oil/wood furnace?",
-        answers: {
-            "Yes": { next: "furnaceAge" },
-            "No": { next: "ductedHeatPump" },
-            "I don't know": { next: "virtualConsultation"},
-        }
-    },
-    furnaceAge: {
-        question: "What is the age of your furnace?",
-        answers: {
-            "0 - 5 years": { 
-                next: "AC", 
-                    action: () => {
-                        switch (result.driver) {
-                            case 'costs':
-                                result.answerString += "EF";
-                                break;
-                            case 'ghgs':
-                                result.answerString += "EF";
-                                break;
-                            case 'comfort':
-                                    result.answerString += "F";
-                                    break;
-                            case 'equipment':
-                                    result.answerString += "";
-                                    break;
-                        }
-                    }
-            },
-            "6 - 10 years": { 
-                next: "AC",
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EF";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EF";
-                            break;
-                        case 'comfort':
-                                result.answerString += "F";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "11 - 15 years": { 
-                next: "AC", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EFM";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EFM";
-                            break;
-                        case 'comfort':
-                                result.answerString += "EFM";
-                                break;
-                        case 'equipment':
-                                result.answerString += "EFM";
-                                break;
-                    }
-                }
-            },
-            "16+ years": { 
-                next: "AC", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EFMZ";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EFMZ";
-                            break;
-                        case 'comfort':
-                                result.answerString += "EFMZ";
-                                break;
-                        case 'equipment':
-                                result.answerString += "EFMZ";
-                                break;
-                    }
-            }
-        }
-    }
-    },
 
-    AC: {
-        question: "Does your home have Air Conditioning?",
-        answers: {
-            "Yes": { next: "ACAge" },
-            "No": { next: "end" },
-            "I don't know": { next: "virutalConsultation"},
-        }
-    },
-    ACAge: {
-        question: "What is the age of your Air Conditioner?",
-        answers: {
-            "0 - 5 years": { 
-                next: "end", 
-                    action: () => {
-                        switch (result.driver) {
-                            case 'costs':
-                                result.answerString += "EF";
-                                break;
-                            case 'ghgs':
-                                result.answerString += "EF";
-                                break;
-                            case 'comfort':
-                                    result.answerString += "F";
-                                    break;
-                            case 'equipment':
-                                    result.answerString += "";
-                                    break;
-                        }
-                    }
-            },
-            "6 - 10 years": { 
-                next: "end",
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EF";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EF";
-                            break;
-                        case 'comfort':
-                                result.answerString += "F";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "11 - 15 years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EF";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EF";
-                            break;
-                        case 'comfort':
-                                result.answerString += "F";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "16+ years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EFP";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EFP";
-                            break;
-                        case 'comfort':
-                                result.answerString += "EFP";
-                                break;
-                        case 'equipment':
-                                result.answerString += "EFP";
-                                break;
-                    }
-            }
-        }
-    }
-    },
+// ---------------
 
-    ductedHeatPumpAge: {
-        question: "What is the age of your ducted heat pump?",
-        answers: {
-            "0 - 5 years": { 
-                next: "AC", 
-                    action: () => {
-                        switch (result.driver) {
-                            case 'costs':
-                                result.answerString += "H";
-                                break;
-                            case 'ghgs':
-                                result.answerString += "H";
-                                break;
-                            case 'comfort':
-                                    result.answerString += "H";
-                                    break;
-                            case 'equipment':
-                                    result.answerString += "";
-                                    break;
-                        }
-                    }
-            },
-            "6 - 10 years": { 
-                next: "AC",
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "H";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "H";
-                            break;
-                        case 'comfort':
-                                result.answerString += "H";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "11 - 15 years": { 
-                next: "AC", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "H";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "H";
-                            break;
-                        case 'comfort':
-                                result.answerString += "H";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "16+ years": { 
-                next: "AC", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "HMZ";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "HMZ";
-                            break;
-                        case 'comfort':
-                                result.answerString += "HMZ";
-                                break;
-                        case 'equipment':
-                                result.answerString += "HMZ";
-                                break;
-                    }
-            }
-        }
-    }
-    },
-    ductlessHeatPumpAge: {
-        question: "What is the age of your ductless heat pump?",
-        answers: {
-            "0 - 5 years": { 
-                next: "end", 
-                    action: () => {
-                        switch (result.driver) {
-                            case 'costs':
-                                result.answerString += "EH";
-                                break;
-                            case 'ghgs':
-                                result.answerString += "EH";
-                                break;
-                            case 'comfort':
-                                    result.answerString += "H";
-                                    break;
-                            case 'equipment':
-                                    result.answerString += "";
-                                    break;
-                        }
-                    }
-            },
-            "6 - 10 years": { 
-                next: "end",
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EH";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EH";
-                            break;
-                        case 'comfort':
-                                result.answerString += "H";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "11 - 15 years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EH";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EH";
-                            break;
-                        case 'comfort':
-                                result.answerString += "H";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "16+ years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EHOZ";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EHOZ";
-                            break;
-                        case 'comfort':
-                                result.answerString += "EHOZ";
-                                break;
-                        case 'equipment':
-                                result.answerString += "EHOZ";
-                                break;
-                    }
-            }
-        }
-    }
-    },
-    ductedHeatPump: {
-        question: "Does your home have a ducted heat pump?",
-        answers: {
-            "Yes": { next: "ductedHeatPumpAge" },
-            "No": { next: "virtualConsultaion" },
-            "I don't know": { next: "virutalConsultation"},
-        }
-    },
-    hydronicHeating: {
-        question: "Does your home have hot water radiators/in-floor?",
-        answers: {
-            "Yes": { next: "boiler" },
-            "No": { next: "baseboard" },
-            "I don't know": { next: "virutalConsultation"},
-        }
-    },
-    baseboard: {
-        question: "Does your home have electric baseboard heating?",
-        answers: {
-            "Yes": { next: "end" },
-            "No": { next: "ductlessHeatPump" },
-            "I don't know": { next: "virtualConsultation"},
-        }
-    },
-    ductlessHeatPump: {
-        question: "Does your home have a ductless heat pump?",
-        answers: {
-            "Yes": { next: "ductlessHeatPumpAge" },
-            "No": { next: "virtualConsultation" },
-            "I don't know": { next: "virtualConsultation"},
-        }
-    },
-    boiler: {
-        question: "Does your home have gas/propane/oil/wood boiler",
-        answers: {
-            "Yes": { next: "boilerAge" },
-            "No": { next: "end" },
-            "I don't know": { next: "virutalConsultation"},
-        }
-    },
-    boilerAge: {
-        question: "What is the age of your boiler?",
-        answers: {
-            "0 - 5 years": { 
-                next: "end", 
-                    action: () => {
-                        switch (result.driver) {
-                            case 'costs':
-                                result.answerString += "EG";
-                                break;
-                            case 'ghgs':
-                                result.answerString += "EG";
-                                break;
-                            case 'comfort':
-                                    result.answerString += "G";
-                                    break;
-                            case 'equipment':
-                                    result.answerString += "";
-                                    break;
-                        }
-                    }
-            },
-            "6 - 10 years": { 
-                next: "end",
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EG";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EG";
-                            break;
-                        case 'comfort':
-                                result.answerString += "G";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "11 - 15 years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EG";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EG";
-                            break;
-                        case 'comfort':
-                                result.answerString += "G";
-                                break;
-                        case 'equipment':
-                                result.answerString += "";
-                                break;
-                    }
-                }
-            },
-            "16+ years": { 
-                next: "end", 
-                action: () => {
-                    switch (result.driver) {
-                        case 'costs':
-                            result.answerString += "EGNZ";
-                            break;
-                        case 'ghgs':
-                            result.answerString += "EGNZ";
-                            break;
-                        case 'comfort':
-                                result.answerString += "EGNZ";
-                                break;
-                        case 'equipment':
-                                result.answerString += "EGNZ";
-                                break;
-                    }
-            }
-        }
-    }
-    },
+// This is where questions object was
 
-    virtualConsultation: {
-        question: "Would you like to book a virtual consultation?",
-        answers: {
-            "Yes": { next: "end"},
-            "No": { next: "end"},
-        }
-    },
-    
-    
-    end: {
-        question: "Would you like to save your responses?"
-    }
-};
-            
+// ---------------
+
+        
 let current = "start";
 let result = {
     answerString: "",
@@ -579,7 +150,6 @@ function askQuestion() {
     const q = questions[current];
     const questionElem = document.getElementById('question');
     const answersElem = document.getElementById('answers');
-
     questionElem.innerText = q.question;
     answersElem.innerHTML = '';
 
@@ -588,6 +158,39 @@ function askQuestion() {
         button.innerText = answer;
         button.onclick = () => handleAnswer(answer);
         answersElem.appendChild(button);
+        
+
+        
+        if (answer == 'Reducing Costs' && result.driver.includes('costs')) {
+            button.style.backgroundColor = '#5A8C2A'; 
+        }
+        if (answer == 'Reducing Emissions' && result.driver.includes('ghgs')) {
+            button.style.backgroundColor = '#5A8C2A'; 
+        }
+        if (answer == 'Thermal Comfort' && result.driver.includes('comfort')) {
+            button.style.backgroundColor = '#5A8C2A'; 
+        }
+        if (answer == 'Equipment at End of Life' && result.driver.includes('equipment')) {
+            button.style.backgroundColor = '#5A8C2A'; 
+        }
+        // if(answer == 'Equipment at End of Life'){
+        //     const space = document.createElement('br');
+        //     answersElem.appendChild(space);
+        // }
+        if (answer == 'Next' && result.driver.length == 0) {
+            button.style.backgroundColor = 'grey'; 
+            questions["start"].answers["Next"].next = 'start';
+        }
+        if (answer == 'Next' && result.driver.length > 0) {
+            button.style.backgroundColor = 'blue'; 
+            questions["start"].answers["Next"].next = 'ductWork';
+        }
+
+        if(q.question == "Would you like to book a virtual consultation?" && answer == "Yes"){
+            button.onclick = function() {
+                window.location.href = 'https://calendly.com/cutyourhomecarbon'; // Replace with your desired URL
+            };
+        }
     }
 }
 
@@ -607,24 +210,30 @@ function handleAnswer(answer) {
 
         const yesButton = document.createElement('button');
         yesButton.innerText = 'Yes';
-        yesButton.onclick = () => saveResponses(true);
+        yesButton.onclick = () => {saveResponses(true)};
         answersElem.appendChild(yesButton);
 
         const noButton = document.createElement('button');
         noButton.innerText = 'No';
         noButton.onclick = () => saveResponses(false);
-        answersElem.appendChild(noButton);
+        answersElem.appendChild(backButton);
+
+        
+        
     } else {
         askQuestion();
     }
 }
 
 
-function saveResponses() {
-    var replies = JSON.stringify(responses,null,2);
-    replies = formatResponses(replies);
-    // console.log(replies);
-    askForLetter(result.answerString);
+function saveResponses(yesOrNo) {
+    if(yesOrNo == true){
+        var replies = JSON.stringify(responses,null,2);
+        replies = formatResponses(replies);
+        console.log(replies);
+        // sendEmail(replies);
+        askForLetter(result.answerString); 
+    }
 }
 
 function formatResponses(r){
@@ -638,49 +247,25 @@ function formatResponses(r){
     r = r.replaceAll(',', '');
     r = r.replaceAll(']', '');
     r = r.replaceAll('[', '');
+    console.log(r);
     return r;
 }
 
 
-function formatText(text) {
     
-    const fragment = document.createDocumentFragment();
-    const parts = text.split(/(%h |%h|%sh |%sh|%b |%b)/).filter(Boolean);
+    // askQuestion();
+    setTimeout(askQuestion, 200);
+ 
+
+
+function sendEmail(r) {
+    var recipient = "matthew@laszloenergy.com";
+    var subject = "Home Energy Consultation Interest";
+    var body = r;
+    var cc = "";
+    var bcc = "";
+
+    var mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}&cc=${cc}&bcc=${bcc}`;
     
-    let element = null;
-  
-    parts.forEach(part => {
-      if (part.startsWith('%h ')) {
-        element = document.createElement('h1');
-        element.textContent = part.replace('%h ', '');
-        fragment.appendChild(element);
-      } 
-      else if (part === '%h') {
-        element = null; // Closing tag
-      } 
-      else if (part.startsWith('%sh ')) {
-        element = document.createElement('h2');
-        element.textContent = part.replace('%sh ', '');
-        fragment.appendChild(element);
-      } 
-      else if (part === '%sh') {
-        element = null; // Closing tag
-      } 
-      else if (part.startsWith('%b ')) {
-        element = document.createElement('p');
-        element.textContent = part.replace('%b ', '');
-        fragment.appendChild(element);
-      } 
-      else if (part === '%b') {
-        element = null; // Closing tag
-      } 
-      else if (element) {
-        element.textContent += part;
-      }
-    });
-
-    console.log("Fragrment" + fragment);
-    return fragment;
-  }
-
-askQuestion();
+    window.location.href = mailtoLink;
+}
