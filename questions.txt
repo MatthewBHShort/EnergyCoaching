@@ -646,6 +646,10 @@ questions = {
         }
     },
     end: {
-        question: "Would you like to save your responses?"
+        question: "Would you like to save your responses?",
+        answers: {
+            "Yes": {action: () => saveResponses(true)},
+            "No": {action: () => saveResponses(false)},
+            "Back": {action: () => saveResponses(false)},
     }
 };
